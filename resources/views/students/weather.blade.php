@@ -31,7 +31,7 @@
             <div class="col-md-6">
                 <div class="weather-form">
                     <h2 class="mb-4">Weather Forecast</h2>
-                    <form action="/weather" method="POST">
+                    <form method="GET" action="{{ route('get.weather', ['city' => $city ?? '']) }}">
                         @csrf
                         <div class="form-group">
                             <label for="city">Enter City:</label>
